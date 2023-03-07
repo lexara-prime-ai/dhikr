@@ -3,8 +3,4 @@
 ## Preview
 ![preview](https://github.com/projectfinalaudio/dhikr/blob/master/preview.png?raw=true)
 
-## Build
-```bash
-$ androidjs b
-```
 
