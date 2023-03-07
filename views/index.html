@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ذِكْر | Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script type="text/javascript" src="../node_modules/androidjs/lib/androidjs.js"></script>
+</head>
+
+<style>
+  .app {
+    font-size: 30px;
+  }
+</style>
+
+<body>
+  <header>
+    <h2 class="logo">ذِكْر</h2>
+    <li><i class="fas fa-info-circle icon"></i></li>
+    <li>
+      <a href="mailto:irfanghat@gmail.com">
+        <i class="fas fa-envelope icon"></i>
+      </a>
+    </li>
+    <li><i class="fas fa-mosque icon"></i></li>
+  </header>
+
+  <div class="container">
+    <!-- JUMBOTRON -->
+    <div class="jumbotron">
+      <img class="img" src="../assets/images/salat.png" alt="">
+      <h3 class="welcome-msg" id='msg'><span>السَّلَامُ عَلَيْكُمْ </span>وَرَحْمَةُ ٱللَّهِ وَبَرَكاتُهُ‎</h3>
+    </div>
+    <!-- COUNTER -->
+    <div class="counter">
+      <h2 class="heading"><span>Tasbeeh</span> Counter</h2>
+      <div class="count" id="count">0</div>
+      <div class="buttons">
+        <button id="increase">
+          <i class="fas fa-circle-chevron-up counter-btn"></i>
+        </button>
+        <button id="reset">
+          <i class="fas fa-rotate-right counter-btn"></i>
+        </button>
+      </div>
+    </div>
+    <!-- HADITH -->
+    <div class="hadith">
+      <h2 class="heading"><span>Ha</span>dith</h2>
+      <h3 class="sub-heading">
+        Compiled and translated by <span>Abu Amina Elias (Justin Parrott)</span>
+      </h3>
+      <div class="card">
+        <h3 class="card-heading">Hadith 1</h3>
+        <h3 class="source">
+          Abdullah ibn Amr reported: The Messenger of Allah, peace and blessings be upon him, said:
+        </h3>
+        <p class="content">
+          مَنْ أَحَبَّ أَنْ يُزَحْزَحَ عَنْ النَّارِ وَيَدْخُلَ الْجَنَّةَ فَلْتُدْرِكْهُ مَنِيَّتُهُ وَهُوَ يُؤْمِنُ
+          بِاللَّهِ وَالْيَوْمِ الْآخِرِ وَيَأْتِي إِلَى النَّاسِ مَا يُحِبُّ أَنْ يُؤْتَى إِلَيْهِ
+        </p>
+        <p class="translation">
+          Whoever would love to be delivered from Hellfire and admitted into Paradise, let him meet his end with faith in Allah and the Last Day, and let him treat people as he would love to be treated.
+        </p>
+        <h4 class="source-alt">
+          Source: Ṣaḥīḥ Muslim 1844, Grade: Sahih
+        </h4>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script type="text/javascript" src="../assets/script.js"></script>
+  <script src="../assets/jquery-3.3.1.slim.min.js"></script>
+  <script src="../assets/popper.min.js"></script>
+  <style type="text/css">
+    :root {
+      --primary: #6d5959;
+      --secondary: #9dcbba;
+      --light: #abebd2;
+      --light-alt: #25bfac;
+      --dark: #313131;
+      --white: #f6f6f6;
+      --box-shadow: 0 .4rem 1rem 0 rgba(0, 0, 0, .2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-transform: capitalize;
+      transition: .4s all ease;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      background: var(--dark);
+    }
+
+    .logo {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .logo:hover {
+      color: var(--primary);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      padding: 8px 3px;
+      background: var(--light);
+      box-shadow: var(--box-shadow);
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .icon {
+      color: var(--dark);
+    }
+
+    .icon:hover {
+      color: var(--primary);
+      transform: scale(.9);
+    }
+
+    .container {
+      text-align: center;
+      padding: 1rem;
+
+    }
+
+    .img {
+      width: 80%;
+      border-radius: 99%;
+      box-shadow: var(--box-shadow);
+      margin-top: 2rem;
+    }
+
+    .welcome-msg {
+      color: var(--light);
+      padding-top: 1rem;
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .welcome-msg span {
+      color: var(--light-alt);
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+
+    hr {
+      border-top: none;
+      color: var(--light);
+      margin-top: 1rem;
+    }
+
+    .heading {
+      color: var(--dark);
+      padding-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    .heading span {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .counter {
+      background: var(--light);
+      border-radius: 12px;
+      box-shadow: var(--box-shadow);
+      margin-top: 1rem;
+    }
+
+    .count {
+      color: var(--dark);
+      border-radius: 60px;
+      font-size: 3rem;
+      font-weight: 400;
+      max-width: 150px;
+      margin: auto;
+      margin-top: .5rem;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .3;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .buttons {
+      margin-top: .5rem;
+
+      cursor: pointer;
+    }
+
+    #increase,
+    #reset {
+      border: none;
+      background: transparent;
+    }
+
+    .counter-btn {
+      padding: 12px;
+      font-size: 2rem;
+      color: var(--dark);
+    }
+
+    .counter-btn:hover {
+      color: var(--primary);
+      transform: scale(.95);
+    }
+
+    .hadith h2 {
+      color: var(--light);
+      font-size: 1.6rem;
+      padding-bottom: 1.3rem;
+    }
+
+    .hadith h2 span {
+      color: var(--light-alt);
+      border-bottom: 3px solid var(--light-alt);
+    }
+
+    .hadith .sub-heading {
+      color: #9dcbba;
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      padding-bottom: 1rem;
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 32px;
+      padding: 1.3rem;
+      letter-spacing: 1px;
+      box-shadow: var(--box-shadow);
+    }
+
+    .card-heading {
+      color: var(--light-alt);
+      font-size: 1.5rem;
+      font-weight: 400;
+      padding: 9px;
+    }
+
+    .source {
+      text-align: left;
+      font-weight: 400;
+      font-size: .9rem;
+      padding-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .content {
+      color: var(--dark);
+      font-weight: 600;
+      text-align: right;
+      padding-bottom: 1rem;
+    }
+
+    .translation {
+      color: var(--primary);
+      font-size: .8rem;
+      padding-bottom: 1rem;
+      text-align: center;
+    }
+
+    .source-alt {
+      text-align: left;
+      font-weight: 400;
+      font-size: .6rem;
+      padding-bottom: 1rem;
+      color: var(--dark);
+      text-align: center;
+    }
+  </style>
+  <script src="../js/script.js"></script>
+  <script src="../assets/fontawesome/js/all.js"></script>
+  <script type="text/javascript">
+    function toggle_popover() {
+      $('#popover').popover('toggle')
+    }
+  </script>
+</body>
+
+</html>
